@@ -1,0 +1,14 @@
+language: go
+env:
+- GO_ENV=test
+
+before_script:
+  - psql -c 'create database buffalo-react_test;' -U postgres
+	- mysql -e 'CREATE DATABASE buffalo-react_test;'
+  - mkdir -p $TRAVIS_BUILD_DIR/public/assets
+
+go:
+  - 1.7.x
+  - master
+
+go_import_path: github.com/kkarimi/buffalo-react

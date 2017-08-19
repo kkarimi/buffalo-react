@@ -1,0 +1,11 @@
+development:
+  dialect: "sqlite3"
+  database: {{env "GOPATH" }}/github.com/kkarimi/buffalo-react/buffalo-react_development.sqlite
+
+test:
+  dialect: "sqlite3"
+  database: {{env "GOPATH" }}/github.com/kkarimi/buffalo-react/buffalo-react_test.sqlite
+
+production:
+  dialect: "sqlite3"
+  database: {{env "GOPATH" }}/github.com/kkarimi/buffalo-react/buffalo-react_production.sqlite
